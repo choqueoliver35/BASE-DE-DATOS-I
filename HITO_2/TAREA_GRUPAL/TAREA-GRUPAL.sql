@@ -1,0 +1,34 @@
+CREATE DATABASE TAREA_GRUPAL_H2;
+USE TAREA_GRUPAL_H2;
+
+CREATE TABLE CLIENTE(
+	CI integer PRIMARY KEY,
+	nombre varchar (20),
+	apellido varchar (20)
+
+);
+
+CREATE TABLE VEHICULO(
+	IDE_CAR  varchar(100) PRIMARY KEY,
+	modelo varchar(100),
+	color varchar(100),
+	marca varchar(100),
+	costo integer
+	);
+
+CREATE TABLE DET_COMPRA(
+	NIT integer PRIMARY KEY,
+	CI integer,
+	IDE_CAR varchar(100),
+	precio integer,
+	FOREIGN KEY (CI) REFERENCES CLIENTE(CI),
+	FOREIGN KEY (IDE_CAR) REFERENCES VEHICULO(IDE_CAR)
+);
+
+DROP TABLE CLIENTE;
+DROP TABLE VEHICULO;
+
+SELECT * FROM CLIENTE;
+SELECT * FROM VEHICULO;
+SELECT * FROM DET_COMPRA;
+
