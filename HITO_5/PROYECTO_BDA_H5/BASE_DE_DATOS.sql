@@ -175,9 +175,6 @@ WHERE CAST(V.Cuenta_Pagada AS INTEGER) > 1000
 
 
 
-
-
-
 ------------
 -------------------------------------------
 /*      TABLAS PARA EL ROLL GERENTE      */
@@ -221,9 +218,41 @@ TABLE Ventas
 */
 
 
+SELECT * FROM [dbo].[Clientes]
+SELECT * FROM [dbo].[Inventario]
+SELECT * FROM [dbo].[LoginEmpleado]
+SELECT * FROM [dbo].[LoginGerente]
+SELECT * FROM [dbo].[PersonalEmpleado]
+SELECT * FROM [dbo].[PersonalGerente]
+SELECT * FROM [dbo].[Producto]
+SELECT * FROM [dbo].[Rembolsos]
+SELECT * FROM [dbo].[Ventas]
 
 
+INSERT INTO [dbo].[Clientes]([Id_Cliente],[ci],[Nombre_Clientes],[Apellido_Clientes])
+VALUES()
 
+INSERT INTO [dbo].[Inventario]([Id_Inventario],[Id_Productos],[Productos],[Marcas])
+VALUES()
 
+INSERT INTO [dbo].[LoginEmpleado]([id_Login_Empleado],[Contraseña],[Usuario])
+VALUES()
 
+INSERT INTO [dbo].[LoginGerente]([Id_Login_Gerente],[Contraseña],[Usuario])
+VALUES()
+
+INSERT INTO [dbo].[PersonalEmpleado]([Id_Empleado],[Nombre_Empleado],[Apellido_Empleado],[Sueldo_Empleado],[Turno_Empleado])
+VALUES()
+
+INSERT INTO [dbo].[PersonalGerente]([Id_Gerente],[Nombre_Gerente],[Apellido_Gerente],[Sueldo_Gerente],[Turno_Gerente])
+VALUES()
+
+INSERT INTO [dbo].[Producto]([Id_Producto],[Nombre],[Precio],[Marca],[Stock])
+VALUES()
+
+INSERT INTO [dbo].[Rembolsos]([Id_Rembolsos],[Id_Productos_Rembolsados],[Monto_Rembolsado],[Motivo])
+VALUES()
+
+INSERT INTO [dbo].[Ventas]([Id_Ventas],[Id_Cliente],[Id_Productos],[Cuenta_a_Pagar],[Cuenta_Pagada],[Total_a_Pagar])
+VALUES()
 
